@@ -1,6 +1,6 @@
 {
   "name": "seconds-humanizer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Formats a duration in seconds as a compact human-readable string with adjustable precision and units",
   "type": "module",
   "main": "src/index.js",
