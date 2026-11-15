@@ -28,3 +28,10 @@ Formatting durations by hand is repetitive and error-prone: you floor, modulus, 
 
 - `humanizeSeconds(totalSeconds, opts?)` — the formatter.
 - `UNITS` — the ordered unit definitions: `[{ name, seconds }, ...]` from year down to second.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
